@@ -17,6 +17,7 @@ class LinkedinPage extends Base {
 
 
     clickFirstAnalytics(){
+        this.pauseShort()
         this.postActivity.waitForExist()
         this.postActivity.click()
         this.firstAnalytics.waitForExist()

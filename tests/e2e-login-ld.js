@@ -1,13 +1,13 @@
 import LoginLinkedinPage from '../page-objects/pages/Login-page-linkedin'
 import NavBar from '../page-objects/components/NavBar'
 import LinkedinPage from '../page-objects/pages/Linkedin-page'
-import config from './config'
+require('dotenv').config()
 
 describe('E2E Linkedin flow', () => {
     it('Should login with valid passwords', () => {
         browser.url('https://www.linkedin.com/')
         LoginLinkedinPage.loginBtn.waitForExist()
-        LoginLinkedinPage.login(`${config.user}`, `${config.pass}`)
+        LoginLinkedinPage.login(process.env.USERNAME, process.env.PASSWORD)
         NavBar.homeIcon.waitForExist()
         browser.saveScreenshot('./screenshots/linkedin-home.png')
     })

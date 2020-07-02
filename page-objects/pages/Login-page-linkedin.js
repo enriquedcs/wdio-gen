@@ -26,6 +26,7 @@ class LoginLinkedinPage extends Base {
         this.userNameInput.setValue(username)
         this.passwordInput.waitForExist()
         this.passwordInput.setValue(password)
+        this.pauseShort()
         this.submitBtn.click()
     }
 
