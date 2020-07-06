@@ -31,6 +31,16 @@ describe('E2E Linkedin flow', () => {
         NavBar.homeIcon.waitForExist()
         browser.saveScreenshot('./screenshots/linkedin-qualityassurance.png')
     })
+    it('Should check Testengineer Hashtag', () => {
+        browser.url('https://www.linkedin.com/feed/hashtag/testengineer/')
+        NavBar.homeIcon.waitForExist()
+        browser.saveScreenshot('./screenshots/linkedin-testengineer.png')
+    })
+    it('Should check qatesting Hashtag', () => {
+        browser.url('https://www.linkedin.com/feed/hashtag/qatesting/')
+        NavBar.homeIcon.waitForExist()
+        browser.saveScreenshot('./screenshots/linkedin-qatesting.png')
+    })
     it('Should check FirstAnalytics', () => {
         browser.url('https://www.linkedin.com/feed/')
         NavBar.navPhotoIcon.waitForExist()
