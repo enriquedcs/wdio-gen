@@ -2,13 +2,10 @@ import LoginPage from '../page-objects/pages/Login-page'
 import NavBar from '../page-objects/components/NavBar'
 import App from '../page-objects/Apps'
 
-describe('E2E login flow / logout flow', () => {
-    it('Should not login with invalid passwords', () => {
+describe('Several Examples of wdio', () => {
+    it('Should login pop up window', () => {
         browser.url('https://www.linkedin.com/')
         NavBar.clickSignin()
-        LoginPage.login('enrique.decoss@hotmail.com', 'Zekix1883')
-        const message = LoginPage.error
-        expect(message).toHaveText('Login and/or password are wrong.')
     })
 
 })
