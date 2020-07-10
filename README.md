@@ -8,7 +8,7 @@
 
 # WDIO-GEN
 
-Automated Test Suite generic using webdriverIO
+Automated Tests using webdriverIO
 
 
 # How it works
